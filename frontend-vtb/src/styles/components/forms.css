@@ -1,0 +1,228 @@
+/* Кнопки */
+.btn {
+    padding: 10px 20px;
+    border: 1px solid rgba(0, 159, 224, 0.2);
+    border-radius: 6px;
+    background: rgba(255, 255, 255, 0.95);
+    cursor: pointer;
+    transition: all 0.3s ease;
+    font-size: 14px;
+    display: inline-flex;
+    align-items: center;
+    gap: 8px;
+    text-decoration: none;
+    color: #001529;
+    backdrop-filter: blur(5px);
+    font-weight: 500;
+}
+
+.btn:hover {
+    border-color: #009fe0;
+    color: #009fe0;
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(0, 159, 224, 0.15);
+}
+
+.btn-primary {
+    background: linear-gradient(135deg, #009fe0, #0e2c75);
+    color: white;
+    border: none;
+}
+
+.btn-primary:hover {
+    background: linear-gradient(135deg, #0088c7, #0b235e);
+    color: white;
+    transform: translateY(-1px);
+    box-shadow: 0 6px 20px rgba(0, 159, 224, 0.3);
+}
+
+.btn-block {
+    display: block;
+    width: 100%;
+    text-align: center;
+    justify-content: center;
+}
+
+.btn-large {
+    padding: 14px 28px;
+    font-size: 16px;
+    border-radius: 8px;
+}
+
+/* Теги */
+.tag {
+    display: inline-block;
+    padding: 4px 12px;
+    border-radius: 16px;
+    font-size: 12px;
+    font-weight: 500;
+    backdrop-filter: blur(5px);
+}
+
+.tag-success {
+    background: rgba(0, 168, 107, 0.1);
+    border: 1px solid rgba(0, 168, 107, 0.3);
+    color: #00a86b;
+}
+
+.tag-warning {
+    background: rgba(255, 149, 0, 0.1);
+    border: 1px solid rgba(255, 149, 0, 0.3);
+    color: #ff9500;
+}
+
+.tag-error {
+    background: rgba(255, 59, 48, 0.1);
+    border: 1px solid rgba(255, 59, 48, 0.3);
+    color: #ff3b30;
+}
+
+.tag-blue {
+    background: rgba(0, 159, 224, 0.1);
+    border: 1px solid rgba(0, 159, 224, 0.3);
+    color: #009fe0;
+}
+
+/* Steps */
+.steps {
+    display: flex;
+    margin: 40px 0;
+    position: relative;
+    justify-content: space-between;
+}
+
+.steps::before {
+    content: '';
+    position: absolute;
+    top: 16px;
+    left: 0;
+    right: 0;
+    height: 2px;
+    background: rgba(0, 159, 224, 0.2);
+    z-index: 1;
+}
+
+.step {
+    flex: 1;
+    text-align: center;
+    position: relative;
+    z-index: 2;
+}
+
+.step-number {
+    width: 36px;
+    height: 36px;
+    border-radius: 50%;
+    background: rgba(0, 159, 224, 0.1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 auto 8px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    backdrop-filter: blur(5px);
+    color: #009fe0;
+}
+
+.step.active .step-number {
+    background: linear-gradient(135deg, #009fe0, #0e2c75);
+    color: white;
+    box-shadow: 0 4px 15px rgba(0, 159, 224, 0.3);
+}
+
+.step.completed .step-number {
+    background: linear-gradient(135deg, #00a86b, #00c853);
+    color: white;
+}
+
+.step-title {
+    font-size: 14px;
+    font-weight: 500;
+    color: #001529;
+}
+
+/* Формы */
+.form-group {
+    margin-bottom: 20px;
+}
+
+.form-label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: 500;
+    color: #001529;
+}
+
+.form-control {
+    width: 100%;
+    padding: 12px 16px;
+    border: 1px solid rgba(0, 159, 224, 0.3);
+    border-radius: 6px;
+    font-size: 14px;
+    font-family: inherit;
+    background: rgba(255, 255, 255, 0.95);
+    backdrop-filter: blur(5px);
+    transition: all 0.3s ease;
+    color: #001529;
+}
+
+.form-control:focus {
+    outline: none;
+    border-color: #009fe0;
+    box-shadow: 0 0 0 3px rgba(0, 159, 224, 0.1);
+    background: rgba(255, 255, 255, 0.98);
+}
+
+textarea.form-control {
+    min-height: 120px;
+    resize: vertical;
+}
+
+/* Upload area */
+.upload-area {
+    border: 2px dashed rgba(0, 159, 224, 0.3);
+    border-radius: 8px;
+    padding: 40px;
+    text-align: center;
+    background: rgba(255, 255, 255, 0.8);
+    transition: all 0.3s ease;
+    margin-bottom: 20px;
+    cursor: pointer;
+    backdrop-filter: blur(5px);
+}
+
+.upload-area:hover {
+    border-color: #009fe0;
+    background: rgba(255, 255, 255, 0.95);
+    transform: translateY(-1px);
+}
+
+.upload-icon {
+    font-size: 48px;
+    color: #009fe0;
+    margin-bottom: 16px;
+    opacity: 0.7;
+}
+
+.upload-text {
+    font-size: 16px;
+    margin-bottom: 8px;
+    color: #001529;
+}
+
+.upload-hint {
+    color: #666;
+    font-size: 14px;
+}
+
+/* Success screen */
+.success-screen {
+    text-align: center;
+    padding: 60px 0;
+}
+
+.success-icon {
+    font-size: 64px;
+    color: #00a86b;
+    margin-bottom: 16px;
+}

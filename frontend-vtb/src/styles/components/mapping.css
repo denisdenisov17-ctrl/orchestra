@@ -1,0 +1,247 @@
+.mapping-card {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.upload-section {
+  display: flex;
+  gap: 24px;
+  margin-bottom: 24px;
+}
+
+.file-upload {
+  flex: 1;
+  background: var(--color-background-light);
+  padding: 20px;
+  border-radius: 8px;
+  text-align: center;
+}
+
+.file-upload h3 {
+  margin-bottom: 16px;
+  color: var(--color-text-primary);
+}
+
+.file-upload input[type="file"] {
+  display: none;
+}
+
+.file-upload label.btn {
+  display: inline-block;
+  margin-bottom: 8px;
+}
+
+.file-name {
+  display: block;
+  color: var(--color-success);
+  margin-top: 8px;
+}
+
+.actions {
+  display: flex;
+  gap: 12px;
+  margin-bottom: 24px;
+}
+
+.error-message {
+  color: var(--color-error);
+  padding: 12px;
+  background: var(--color-error-light);
+  border-radius: 4px;
+  margin-bottom: 24px;
+}
+
+.mapping-result {
+  background: var(--color-background-light);
+  padding: 24px;
+  border-radius: 8px;
+}
+
+.stats {
+  display: flex;
+  gap: 24px;
+  margin: 16px 0;
+  padding: 16px;
+  background: var(--color-white);
+  border-radius: 4px;
+}
+
+.stat-item {
+  flex: 1;
+  text-align: center;
+}
+
+.stat-item span {
+  display: block;
+  color: var(--color-text-secondary);
+  margin-bottom: 4px;
+}
+
+.stat-item strong {
+  font-size: 24px;
+  color: var(--color-primary);
+}
+
+.mapping-list {
+  margin-top: 16px;
+}
+
+.mapping-item {
+  display: flex;
+  flex-direction: column; /* stack vertically: route info then editing block */
+  justify-content: flex-start;
+  align-items: stretch;
+  padding: 12px;
+  background: var(--color-white);
+  border-radius: 4px;
+  margin-bottom: 8px;
+}
+
+.task-info {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.confidence {
+  font-size: 14px;
+  color: var(--color-text-secondary);
+}
+
+.endpoint-info {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  width: 100%;
+}
+
+.route-info {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 12px;
+}
+
+.edit-block {
+  margin-top: 8px;
+  width: 100%;
+}
+
+.method {
+  padding: 4px 8px;
+  background: var(--color-primary);
+  color: white;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.path {
+  color: var(--color-text-secondary);
+  font-family: monospace;
+}
+
+.data-flow {
+  margin-top: 24px;
+  padding-top: 24px;
+  border-top: 1px solid var(--color-border);
+}
+
+.flow-list {
+  margin-top: 16px;
+}
+
+.flow-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 8px 12px;
+  background: var(--color-white);
+  border-radius: 4px;
+  margin-bottom: 8px;
+}
+
+.data-type {
+  font-size: 14px;
+  color: var(--color-text-secondary);
+  padding: 2px 8px;
+  background: var(--color-background-light);
+  border-radius: 4px;
+}
+
+/* Responsive adjustments for smaller screens */
+@media (max-width: 900px) {
+  .upload-section {
+    flex-direction: column;
+    gap: 12px;
+  }
+
+  .actions {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .stats {
+    flex-direction: column;
+    gap: 8px;
+  }
+
+  .mapping-item {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+
+  .endpoint-info {
+    width: 100%;
+    justify-content: space-between;
+  }
+
+  .mapping-result {
+    padding: 16px;
+  }
+}
+
+@media (max-width: 600px) {
+  .mapping-card {
+    padding: 12px;
+  }
+
+  .file-upload {
+    padding: 12px;
+  }
+
+  .method {
+    font-size: 12px;
+    padding: 3px 6px;
+  }
+
+  .path {
+    font-size: 12px;
+  }
+
+  /* Make textareas and pre blocks more compact on mobile */
+  textarea {
+    font-size: 13px;
+  }
+
+  pre {
+    font-size: 12px;
+  }
+
+  /* Generator UI adjustments */
+  .mapping-result > div[style] {
+    padding: 12px;
+  }
+
+  /* Ensure generator controls wrap and buttons don't overflow */
+  .mapping-result select,
+  .mapping-result input[type="number"] {
+    max-width: 140px;
+  }
+
+  .mapping-result .btn {
+    flex: 1 1 auto;
+    min-width: 0;
+  }
+}
